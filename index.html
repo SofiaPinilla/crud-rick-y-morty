@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="d-flex justify-content-center gap-2 mt-3">
+      <span class="btn btn-primary" id="charactersNav">Characters</span>
+      <span class="btn btn-primary" id="createCharacterNav"
+        >Create Character</span
+      >
+    </nav>
+    <!-- .d-none == .hide -->
+    <div class="characters-page">
+      <div class="container">
+        <h1>Characters</h1>
+        <div>
+          <ul class="pagination pagination-lg">
+            <li class="page-item disabled" id="btn-prev-page">
+              <a class="page-link" href="#">&laquo;</a>
+            </li>
+
+            <li class="page-item" id="btn-next-page">
+              <a class="page-link" href="#">&raquo;</a>
+            </li>
+          </ul>
+        </div>
+        <div class="characters d-flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+    <div class="characters-form d-none">
+      <h1>Create character</h1>
+      <form>
+        <input type="text" placeholder="Write a name" id="name"/>
+        <input type="text" placeholder="Write a status" id="status" />
+        <input type="text" placeholder="Write a url image" id="image" />
+        <input type="submit" value="Send" class="btn btn-primary" id="btn"/>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+      integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
